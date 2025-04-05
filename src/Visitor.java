@@ -33,10 +33,10 @@ public class Visitor extends Creature {
             }
         }
         if (cnt == 9)
-            setId(id);
+            this.id = id;
         else
             this.id = "000000000"; // ערך דיפולט
-    }
+    } 
 
     public Date getVisitDate () {
         return visitDate;

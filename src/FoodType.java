@@ -33,6 +33,8 @@ public class FoodType {
 
     //פונקצית EQUALS שמשווה אם המזון שני האובייקטים זהים בכל הערכים
     public boolean equals(FoodType foodType){
+        if(foodType==null)
+            return false;
         return (foodType.foodName.equalsIgnoreCase(this.foodName)&&foodType.dailyAmount==this.dailyAmount&&
                 foodType.feedingPerDay==this.feedingPerDay&&foodType.expirationDate==this.expirationDate);
     }

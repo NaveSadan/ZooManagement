@@ -12,7 +12,7 @@ public  abstract class Creature {
     public abstract boolean equals(Object o);
 
     public String toString() {
-        return "Id: "+ id+ "Name"+ name;
+        return "Id: "+ id+ ", Name"+ name;
     }
 
     public String getName() {

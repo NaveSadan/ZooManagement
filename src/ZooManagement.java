@@ -52,7 +52,7 @@ public class ZooManagement {
             System.out.println("No visitors");
         else
             for(Visitor visitor:visitors){
-                System.out.println(visitors);
+                System.out.println(visitor);
             }
     }
  
@@ -64,16 +64,17 @@ public class ZooManagement {
         return true;
     }
 
-    public boolean addZooManagerWithComplexEmailValidation (ZooManager  zm) {
-        for (ZooManager zooManager : zooManagers){
+    public boolean addZooManagerWithComplexEmailValidation(ZooManager zm) {
+        for (ZooManager zooManager : zooManagers) {
             if (zooManager.getId().equals(zm.getId()))
                 if (zm.getEmailM().length() > 10)
-                    if(!zm.getEmailM().substring(zm.getEmailM().length()-4, zm.getEmailM().length()-1).equals("@ZOO"))
+                    if (!zm.getEmailM().substring(zm.getEmailM().length() - 4, zm.getEmailM().length() - 1).equals("@ZOO"))
                         System.out.println("fault");
-            return false;}
+            return false;
+        }
         if (zm.getEmailM().length() > 10)
             return false;
-        if(!zm.getEmailM().substring(zm.getEmailM().length()-4, zm.getEmailM().length()-1).equals("@ZOO"))
+        if (!zm.getEmailM().substring(zm.getEmailM().length() - 4, zm.getEmailM().length() - 1).equals("@ZOO"))
             return false;
         zooManagers.add(zm);
         return true;
